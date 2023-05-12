@@ -1,9 +1,8 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Catagory {
@@ -11,5 +10,9 @@ public class Catagory {
     @Id
     private Long id;
     private String name;
+
+    @OneToMany
+    @JoinColumn(name = "catagory_id")
+    private List<Product> products;
 
 }

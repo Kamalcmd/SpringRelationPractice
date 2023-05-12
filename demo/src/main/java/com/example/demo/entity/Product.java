@@ -1,9 +1,8 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Product {
@@ -13,5 +12,9 @@ public class Product {
     private String name;
     private Double price;
     private Double rating;
+
+    @OneToMany
+    @JoinColumn(name = "review_id")
+    private List<Review> reviews;
 
 }
