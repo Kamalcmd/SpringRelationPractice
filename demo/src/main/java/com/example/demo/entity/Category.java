@@ -1,11 +1,16 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @Entity
-public class Catagory {
+@Data
+@NoArgsConstructor
+public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
