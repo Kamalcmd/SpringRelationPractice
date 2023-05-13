@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Category;
 import com.example.demo.services.CategoryService;
+import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,5 +30,20 @@ public class CategoryController {
     {
         catagoryService.delete(id);
     }
+
+    @GetMapping("/{id}")
+    public Category getCategoryById(@PathVariable Long id)
+    {
+        return catagoryService.getCategoryById(id);
+
+    }
+
+    @PutMapping("/{id}")
+    public void update(@PathVariable Long id, @RequestBody Category C)
+    {
+        catagoryService.update(id, C);
+    }
+
+
 
 }
