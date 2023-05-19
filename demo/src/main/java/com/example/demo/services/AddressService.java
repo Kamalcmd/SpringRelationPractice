@@ -13,5 +13,5 @@ public interface AddressService {
 
     void delete(Long id);
 
-    Address getUserById(Long id);
+    Address getAddressById(Long id);
 }

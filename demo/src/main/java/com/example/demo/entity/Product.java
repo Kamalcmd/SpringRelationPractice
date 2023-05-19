@@ -21,5 +21,8 @@ public class Product {
     @JoinColumn(name = "review_id")
     private List<Review> reviews;
 
+ @ManyToOne
+    private Category category;
+
 
 }

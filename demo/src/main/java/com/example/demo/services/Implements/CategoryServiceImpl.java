@@ -40,4 +40,6 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
 
+    public static class ReviewServiceImp {
+    }
 }

@@ -16,8 +16,8 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "catagory_id")
-    private List<Product> products;
+    //@OneToMany
+//    @JoinColumn(name = "catagory_id")
+//    private List<Product> products;
 
 }

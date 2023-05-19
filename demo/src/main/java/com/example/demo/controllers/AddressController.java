@@ -14,7 +14,7 @@ public class AddressController {
     private AddressService addressService;
 
     @GetMapping
-    public List<Address> getAllAddress()
+    public List<Address> getAddress()
     {
        return addressService.getAddress();
     }
@@ -30,16 +30,16 @@ public class AddressController {
         addressService.update(id, A);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id)
     {
         addressService.delete(id);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Address getAddressById(@PathVariable Long id)
     {
-        return addressService.getUserById(id);
+        return addressService.getAddressById(id);
     }
 
 

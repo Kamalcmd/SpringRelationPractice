@@ -36,9 +36,11 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public Address getUserById(Long id) {
+    public Address getAddressById(Long id) {
         return addressRepo.findById(id).get();
     }
+
+
 
 
 }

@@ -21,6 +21,6 @@ public class User {
     @JoinColumn(name="reviews")
     private List<Review> reviews;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 }

@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.entity.Product;
+import com.example.demo.entity.dtos.ProductDto;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface ProductService {
 
     List<Product> getProducts();
 
-    void addProduct(Product product);
+    void addProduct(ProductDto productDto);
 
     Product getProductById(Long id);
 

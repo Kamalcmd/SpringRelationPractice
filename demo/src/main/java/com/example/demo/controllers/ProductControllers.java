@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Category;
 import com.example.demo.entity.Product;
+import com.example.demo.entity.dtos.ProductDto;
 import com.example.demo.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +25,9 @@ public class ProductControllers {
         return productService.getProductById(id);
     }
     @PostMapping
-    public void addProduct(@RequestBody Product product)
+    public void addProduct(@RequestBody ProductDto productDto)
     {
-        productService.addProduct(product);
+        productService.addProduct(productDto);
     }
 
     @DeleteMapping("/{id}")
