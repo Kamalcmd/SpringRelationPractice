@@ -17,9 +17,9 @@ public class User {
     private String firstName;
     private String lastname;
 
-    @OneToMany
-    @JoinColumn(name="reviews")
-    private List<Review> reviews;
+//    @OneToMany
+//    @JoinColumn(name="userId")
+//    private List<Review> reviews;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;

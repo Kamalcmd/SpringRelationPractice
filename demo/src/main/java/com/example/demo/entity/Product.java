@@ -17,9 +17,9 @@ public class Product {
     private Double price;
     private Double rating;
 
-    @OneToMany
-    @JoinColumn(name = "review_id")
-    private List<Review> reviews;
+//    @OneToMany
+//    @JoinColumn(name = "review_id")
+//    private List<Review> reviews;
 
  @ManyToOne
     private Category category;

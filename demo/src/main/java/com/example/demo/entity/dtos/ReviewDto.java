@@ -6,4 +6,5 @@ import lombok.Data;
 public class ReviewDto {
     private String comment;
     private Long productId;
+    private Long userId;
 }

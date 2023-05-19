@@ -5,6 +5,7 @@ import com.example.demo.entity.dtos.ReviewDto;
 import com.example.demo.repositories.AddressRepo;
 import com.example.demo.repositories.ProductRepo;
 import com.example.demo.repositories.ReviewRepo;
+import com.example.demo.repositories.UserRipo;
 import com.example.demo.services.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,8 @@ public class ReviewServicesImp implements ReviewService {
 
     @Autowired
     private ProductRepo productRepo;
+    @Autowired
+    private UserRipo userRipo;
     @Override
     public List<Review> getReview() {
         return reviewRepo.findAll();
@@ -33,6 +36,7 @@ public class ReviewServicesImp implements ReviewService {
         Review review= new Review();
         review.setComment(reviewDto.getComment());
         review.setProduct(productRepo.findById(reviewDto.getProductId()).get());
+        review.setUser(userRipo.findById(reviewDto.getUserId()).get());
         reviewRepo.save(review);
     }
 
