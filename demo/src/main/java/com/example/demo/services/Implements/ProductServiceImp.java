@@ -49,6 +49,11 @@ public class ProductServiceImp implements ProductService {
 
     }
 
+    @Override
+    public List<Product> getPriceGreaterThan(Double price) {
+        return productRepo.findProductsByPriceGreaterThan(price);
+    }
+
 
 }
 

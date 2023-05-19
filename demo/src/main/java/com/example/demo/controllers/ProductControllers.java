@@ -42,6 +42,11 @@ public class ProductControllers {
         productService.update(id, P);
     }
 
+// Product minimum price
 
+    @GetMapping("/minPrice/{price}")
+    public List<Product> getPriceGreaterThan(@PathVariable Double price){
+        return productService.getPriceGreaterThan(price);
+    }
 
 }

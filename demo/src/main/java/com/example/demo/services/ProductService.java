@@ -17,4 +17,6 @@ public interface ProductService {
     void deleteById(Long id);
 
     void update(Long id, Product p);
+
+    List<Product> getPriceGreaterThan(Double price);
 }
