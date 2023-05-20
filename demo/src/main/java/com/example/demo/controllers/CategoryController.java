@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entity.Category;
+import com.example.demo.entity.Product;
 import com.example.demo.services.CategoryService;
 import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,13 @@ public class CategoryController {
     {
         catagoryService.update(id, C);
     }
+
+//    @GetMapping("/cat/{price}")
+//    public List<Product> getCatAndLessThanMaxPrice(@PathVariable Double price)
+//    {
+//        catagoryService.getCatAndLessThanMaxPrice(price);
+//    }
+
 
 
 

@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.entity.Product;
+import com.example.demo.entity.Review;
 import com.example.demo.entity.dtos.ProductDto;
 
 import java.util.List;
@@ -19,4 +20,8 @@ public interface ProductService {
     void update(Long id, Product p);
 
     List<Product> getPriceGreaterThan(Double price);
+
+    List<Product> getCatAndLessThanMaxPrice(Double price, String category);
+
+    List<Review> findreviewsByProductId(Long productId);
 }

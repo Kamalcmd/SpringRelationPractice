@@ -39,7 +39,6 @@ public class CategoryServiceImpl implements CategoryService {
         repositories.save(c);
     }
 
-
     public static class ReviewServiceImp {
     }
 }

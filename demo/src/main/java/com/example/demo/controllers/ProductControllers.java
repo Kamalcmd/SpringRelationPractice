@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Category;
 import com.example.demo.entity.Product;
+import com.example.demo.entity.Review;
 import com.example.demo.entity.dtos.ProductDto;
 import com.example.demo.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,4 +50,16 @@ public class ProductControllers {
         return productService.getPriceGreaterThan(price);
     }
 
+    @GetMapping("/find")
+    public List<Product> getCatAndLessThanMaxPrice(@RequestParam Double price, @RequestParam String category)
+    {
+        return productService.getCatAndLessThanMaxPrice(price, category);
+
+
+    }
+
+    @GetMapping("/{productId}/reviews")
+    public List<Review> findreviewsByProductId(@PathVariable Long productId){
+        return productService.findreviewsByProductId(productId);
+    }
 }

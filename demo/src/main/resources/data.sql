@@ -2,6 +2,7 @@
 INSERT INTO Category (name) VALUES ('Pilot');
 INSERT INTO Category (name) VALUES ('Bullet');
 INSERT INTO Category (name) VALUES ('Tesla');
+INSERT INTO Category (name) VALUES ('cat');
 
 --Data for Product
 INSERT INTO Product(name, price, rating, category_id) VALUES ('16 Inch churot',5.0,3.0,1);
